@@ -35,8 +35,8 @@ Vagrant.configure("2") do |vagrant|
       config.vm.hostname = vm_name.to_s
 
       # Virtualbox
-      config.vm.box               = "precise64"
-      config.vm.network :private_network, ip: vm_options[:ip] if vm_options[:ip]
+      config.vm.box      = "precise64"
+      config.vm.network  :public_network
       config.vm.provider :virtualbox do |vb|
         vb.customize ["modifyvm", :id, "--memory", "512"]
       end
