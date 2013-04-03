@@ -3,3 +3,6 @@
 
 site 'http://community.opscode.com/api/v1'
 
+cookbook 'pnp4nagios', :git => 'https://github.com/Bigpoint/pnp4nagios.git'
+cookbook 'rrdcached',  :git => 'https://github.com/Bigpoint/rrdcached.git'
+cookbook 'icinga',     :git => "https://github.com/Bigpoint/icinga.git"
