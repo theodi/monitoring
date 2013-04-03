@@ -13,6 +13,14 @@ GIT
       apache2 (>= 0.0.0)
       build-essential (>= 0.0.0)
 
+GIT
+  remote: https://github.com/tknerr/cookbooks-vagrant-ohai.git
+  ref: master
+  sha: 8cc7fec0770ab519cfdc02dce33fcdec8e5dd187
+  specs:
+    vagrant-ohai (1.0.1)
+
 DEPENDENCIES
   icinga (>= 0)
+  vagrant-ohai (>= 0)
 

@@ -10,6 +10,7 @@ Vagrant.configure("2") do |vagrant|
   vms = {
     :monitor => {
       :run_list => [
+        "recipe[vagrant-ohai]", # sets ipaddress using eth1 - for virtualboxes only
         "recipe[apt]",
         "recipe[chef-client::config]",
         "recipe[chef-client]",
@@ -18,6 +19,7 @@ Vagrant.configure("2") do |vagrant|
     },
     :'test-icinga-client' => {
       :run_list => [
+        "recipe[vagrant-ohai]", # sets ipaddress using eth1 - for virtualboxes only
         "recipe[apt]",
         "recipe[chef-client::config]",
         "recipe[chef-client]",
