@@ -12,13 +12,14 @@ Vagrant.configure("2") do |vagrant|
       ],
       :role => 'monitoring'
     },
-    # :test_client => {
-    #   :ip => '192.168.33.11',
-    #   :run_list => [
-    #     "recipe[apt]",
-    #     "recipe[icinga::client]"
-    #   ]
-    # }
+    :'test-client' => {
+      :ip => '192.168.33.11',
+      :run_list => [
+        "recipe[apt]",
+        "recipe[chef-client]"
+        # "recipe[icinga::client]"
+      ]
+    }
   }
 
   vms.each_pair do |vm_name, vm_options|
