@@ -2,4 +2,4 @@
 /.vagrant/
 .chef/*.pem
 /cookbooks/
-/data-bags/
+/data-bags/users/icinga.json

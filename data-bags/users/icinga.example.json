@@ -1,0 +1,8 @@
+{
+  "id": "icinga",
+  "groups": "sysadmin",
+  "htpasswd": "<ENCRYPTED HTPASSWD GOES HERE>",
+  "icinga": {
+    "icinga_email": "icinga@theodi.org"
+  }
+}
