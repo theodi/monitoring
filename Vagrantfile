@@ -12,7 +12,7 @@ Vagrant.configure("2") do |vagrant|
       ],
       :role => 'monitoring'
     },
-    :'test-client' => {
+    :'test-icinga-client' => {
       :ip => '192.168.33.11',
       :run_list => [
         "recipe[apt]",
@@ -30,6 +30,8 @@ Vagrant.configure("2") do |vagrant|
 
       config.vm.box = "precise64"
       config.vm.network :private_network, ip: vm_options[:ip] if vm_options[:ip]
+
+      config.vm.hostname = vm_name.to_s
 
       config.vm.provider :virtualbox do |vb|
         vb.customize ["modifyvm", :id, "--memory", "1024"]
