@@ -11,7 +11,6 @@ Vagrant.configure("2") do |vagrant|
     :monitor => {
       :run_list => [
         "recipe[apt]",
-        "recipe[icinga::client]",
         "recipe[chef-client::config]",
         "recipe[chef-client]",
       ],
