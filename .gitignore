@@ -3,3 +3,6 @@
 .chef/*.pem
 /cookbooks/
 /data-bags/users/icinga.json
+/.chef/rackspace_secrets.yaml
+/.chef/id_rsa.pub
+/.chef/id_rsa
