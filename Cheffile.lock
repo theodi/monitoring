@@ -2,43 +2,17 @@ SITE
   remote: http://community.opscode.com/api/v1
   specs:
     apache2 (1.6.0)
-    apt (1.9.0)
     build-essential (1.3.4)
-    yum (2.2.0)
 
 GIT
-  remote: https://github.com/Bigpoint/icinga.git
+  remote: https://github.com/mdxp/icinga-cookbook.git
   ref: master
-  sha: 8a40be88f0ba93b7aed38e6390a48228a07646ef
+  sha: 49d12bc9b6beca9e0530b77ceaa4b7187b29cf04
   specs:
-    icinga (0.1.77)
-      apache2 (>= 1.1.16)
-      apt (>= 0.0.0)
-      build-essential (>= 1.1.2)
-      pnp4nagios (>= 0.0.0)
-      rrdcached (>= 0.0.0)
-
-GIT
-  remote: https://github.com/Bigpoint/pnp4nagios.git
-  ref: master
-  sha: 533f59d9d800918ce2fedc25bf5a2404bd4f233d
-  specs:
-    pnp4nagios (0.1.16)
+    icinga (0.2.0)
       apache2 (>= 0.0.0)
-      apt (>= 0.0.0)
-      yum (>= 0.0.0)
-
-GIT
-  remote: https://github.com/Bigpoint/rrdcached.git
-  ref: master
-  sha: 381cedae986f700d08e430b8e516148893c1a2da
-  specs:
-    rrdcached (0.1.12)
-      apt (>= 0.0.0)
-      yum (>= 0.0.0)
+      build-essential (>= 0.0.0)
 
 DEPENDENCIES
   icinga (>= 0)
-  pnp4nagios (>= 0)
-  rrdcached (>= 0)
 
