@@ -8,6 +8,7 @@ Vagrant.configure("2") do |vagrant|
       :ip => '192.168.33.10',
       :run_list => [
         "recipe[apt]",
+        "recipe[chef-client]"
       ],
       :role => 'monitoring'
     },
