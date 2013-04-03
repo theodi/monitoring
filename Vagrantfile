@@ -14,8 +14,8 @@ Vagrant.configure("2") do |vagrant|
         "recipe[icinga::client]",
         "recipe[chef-client::config]",
         "recipe[chef-client]",
-        "role[monitoring]"
-      ]
+      ],
+      :role => 'monitoring'
     },
     :'test-icinga-client' => {
       :run_list => [
@@ -64,6 +64,7 @@ Vagrant.configure("2") do |vagrant|
         chef.validation_client_name = "chef-validator"
         chef.validation_key_path    = ".chef/chef-validator.pem"
         chef.run_list               = vm_options[:run_list] if vm_options[:run_list]
+        chef.add_role                 vm_options[:role]     if vm_options[:role]
       end
     
     end    
