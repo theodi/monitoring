@@ -39,7 +39,7 @@ Vagrant.configure("2") do |vagrant|
       config.vm.box               = "precise64"
       config.vm.network :private_network, ip: vm_options[:ip] if vm_options[:ip]
       config.vm.provider :virtualbox do |vb|
-        vb.customize ["modifyvm", :id, "--memory", "1024"]
+        vb.customize ["modifyvm", :id, "--memory", "512"]
       end
 
       # Rackspace
@@ -49,7 +49,7 @@ Vagrant.configure("2") do |vagrant|
       # config.vm.provider :rackspace do |rs|
       #   rs.username                 = y["username"]
       #   rs.api_key                  = y["api_key"]
-      #   rs.flavor                   = /1GB/
+      #   rs.flavor                   = /512MB/
       #   rs.image                    = /Precise/
       #   rs.public_key_path          = "./.chef/id_rsa.pub"
       #   rs.endpoint                 = "https://lon.servers.api.rackspacecloud.com/v2"
