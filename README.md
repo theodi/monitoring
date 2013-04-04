@@ -17,4 +17,5 @@ icinga client recipe.
 ## Next steps
 
 * Need to customise client-side checks. Currently these are hardwired in the icinga recipe, so we may need to fork and extend the icinga cookbook to allow us to add our own checks.
+* There is some half-working code for detecting the provider and allowing switching of general config, but it won't work for things like ```vagrant ssh```.
 * Rackspace support is half-written but commented and parked for now as too slow to develop with.

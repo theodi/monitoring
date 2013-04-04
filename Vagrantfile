@@ -5,6 +5,15 @@ require "yaml"
 
 y = YAML.load File.open ".chef/rackspace_secrets.yaml"
 
+def provider
+  # This isn't quite right, because you don't have to specify provider on the command
+  # line if boxes are already up, but for now it might help
+  # vagrant status knows the provider for running VMs, maybe something could be
+  # nabbed from there
+  p = ARGV.find{|x| x.include?('provider')}
+  p ? p.split('=').last.to_sym : :virtualbox
+end
+
 Vagrant.configure("2") do |vagrant|
 
   vms = {
